@@ -11,8 +11,7 @@ class DQN(nn.Module):
         self.conv1 = nn.Conv2d(3, 16, kernel_size=5, stride=2)
         self.conv2 = nn.Conv2d(16, 32, kernel_size=5, stride=2)
         self.conv3 = nn.Conv2d(32, 32, kernel_size=5, stride=2)
-
-        # Initialize the fully connected layer with the correct input size
+        
         self.fc_input_dim = self._get_conv_output((3, 160, 240))  # (channels, height, width)
         self.fc = nn.Linear(self.fc_input_dim, 5)  # 5 actions: up, down, left, right, interact
 
