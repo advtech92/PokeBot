@@ -4,7 +4,7 @@ from mss import mss
 import pygetwindow as gw
 
 
-def capture_screen(window_title="RetroArch Gearboy 3.4.1"):
+def capture_screen(window_title="RetroArch"):
     windows = gw.getWindowsWithTitle(window_title)
     if not windows:
         raise Exception(f"No windows found with title: {window_title}")
